@@ -1,5 +1,5 @@
-const WIP_LIMIT = 3; 
-const DOING = 1;     
+const WIP_LIMIT = 3;
+const DOING = 1;
 
 const COLUMNS = [
   { id: "todo", title: "To do" },
@@ -7,7 +7,6 @@ const COLUMNS = [
   { id: "done", title: "Done" }
 ];
 const PRIORITY_NAMES = ["", "Low", "Medium", "High"];
-
 
 const tasks = [
   { id: 1, title: "Design festival poster", tag: "design", priority: 3, hours: 6, urgent: true, column: 0 },
@@ -194,9 +193,10 @@ function move(id, dir) {
     return;
   }
 
-  task.column = to;  
+  task.column = to;
   say('"' + task.title + '" moved to "' + COLUMNS[to].title + '".', "success");
-  render();          
+  render();
+}
 
 boardEl.addEventListener("click", function (event) {
   const target = event.target;
@@ -236,4 +236,3 @@ function fillTags() {
 fillTags();
 render();
 say("Move cards with the arrow buttons.", "");
-}
