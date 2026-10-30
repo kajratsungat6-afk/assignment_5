@@ -236,3 +236,4 @@ function fillTags() {
 fillTags();
 render();
 say("Move cards with the arrow buttons.", "");
+}
